@@ -1,0 +1,22 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Caches and logs
+*.log
+.cache
+.mypy_cache
+.pytest_cache
+
+# Virtual environment
+venv/
+.env
+
+# Docker volumes
+docker/volumes/
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
