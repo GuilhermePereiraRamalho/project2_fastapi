@@ -31,7 +31,7 @@ services:
       - /var/cache/postgres_data_test:/var/lib/postgresql/data
 
   pgadmin:
-    image: dpage/pgadmin4
+    image: dpage/pgadmin4:6.15
     env_file:
       - ./.env
     ports:
