@@ -54,7 +54,7 @@ def test_update_product_route(db_session, product_on_db):
         "stock": 10
     }
 
-    response = client.put(f'/product/update{product_on_db.id}', json=body)
+    response = client.put(f'/product/update/{product_on_db.id}', json=body)
 
     assert response.status_code == status.HTTP_200_OK
 
