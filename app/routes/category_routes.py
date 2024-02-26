@@ -1,4 +1,3 @@
-from typing import List
 from fastapi import APIRouter, Depends, Response, status, Query
 from sqlalchemy.orm import Session
 from app.schemas.category import Category, CategoryOutput
@@ -20,7 +19,7 @@ def add_category(
 @router.get('/list', response_model=Page[CategoryOutput], description="List categories")
 def list_categories(
     page: int = Query(1, ge=1, description='Page number'),
-    size: int = Query(50, ge=1, le=100, description='Size of page'),
+    size: int = Query(50, ge=1, le=100, description='Page size'),
     db_session: Session = Depends(get_db_session)
 ):
     uc = CategoryUseCases(db_session=db_session)
